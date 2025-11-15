@@ -46,8 +46,8 @@ Curated outlet list with:
 - Category (left / center / right / factual)
 
 ### 4. Hackathon-Friendly Build Path
-- React UI with mocked data  
-- Flask with mocked responses  
+- React UI with data  
+- Flask with responses  
 - n8n pipeline wired in afterward  
 
 ## Frontend (React + Lovable)
