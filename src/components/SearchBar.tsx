@@ -28,10 +28,10 @@ export function SearchBar({ onSearch, placeholder = "What do you want to underst
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="pl-10 h-12 text-base"
+          className="pl-10 h-12 text-base border-2 rounded-sm font-body"
         />
       </div>
-      <Button type="submit" size="lg" className="px-8">
+      <Button type="submit" size="lg" className="px-8 font-body font-medium rounded-sm bg-accent text-accent-foreground hover:bg-accent/90">
         Search
       </Button>
     </form>

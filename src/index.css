@@ -8,52 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 15% 15%;
+    /* Digital Newsprint Palette */
+    --background: 48 13% 93%; /* Carrara White #EEEFE9 */
+    --foreground: 0 0% 15%; /* Mine Shaft #262626 */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 220 15% 15%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 15%; /* Mine Shaft - ink black */
+    --primary-foreground: 48 13% 93%;
 
-    --secondary: 220 10% 95%;
-    --secondary-foreground: 220 15% 15%;
+    --secondary: 48 13% 93%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 220 10% 95%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 220 10% 92%;
-    --accent-foreground: 220 15% 15%;
+    --accent: 40 26% 70%; /* Sorrell Brown #D1BD91 */
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 10% 88%;
-    --input: 220 10% 88%;
-    --ring: 220 15% 15%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem; /* Brutalist - minimal radius */
     
-    /* Political perspective colors */
-    --perspective-left: 214 85% 50%;
-    --perspective-left-foreground: 0 0% 100%;
-    --perspective-left-muted: 214 85% 96%;
+    /* Bias Indicators */
+    --bias-left: 213 53% 50%; /* #3D85C6 */
+    --bias-left-foreground: 0 0% 100%;
     
-    --perspective-center: 270 60% 50%;
-    --perspective-center-foreground: 0 0% 100%;
-    --perspective-center-muted: 270 60% 96%;
+    --bias-center: 0 0% 100%; /* White with border */
+    --bias-center-foreground: 0 0% 15%;
     
-    --perspective-right: 0 75% 55%;
-    --perspective-right-foreground: 0 0% 100%;
-    --perspective-right-muted: 0 75% 96%;
+    --bias-right: 0 65% 65%; /* #E06666 */
+    --bias-right-foreground: 0 0% 100%;
     
-    --perspective-facts: 142 70% 45%;
-    --perspective-facts-foreground: 0 0% 100%;
-    --perspective-facts-muted: 142 70% 96%;
+    --bias-facts: 142 70% 45%;
+    --bias-facts-foreground: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -73,49 +70,45 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 20% 10%;
-    --foreground: 220 10% 95%;
+    --background: 0 0% 10%;
+    --foreground: 48 13% 93%;
 
-    --card: 220 18% 12%;
-    --card-foreground: 220 10% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 48 13% 93%;
 
-    --popover: 220 18% 12%;
-    --popover-foreground: 220 10% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 48 13% 93%;
 
-    --primary: 220 10% 95%;
-    --primary-foreground: 220 20% 10%;
+    --primary: 48 13% 93%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 220 10% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 48 13% 93%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 220 15% 20%;
-    --accent-foreground: 220 10% 95%;
+    --accent: 40 26% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 220 10% 95%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 220 10% 80%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 80%;
     
-    --perspective-left: 214 85% 60%;
-    --perspective-left-foreground: 0 0% 100%;
-    --perspective-left-muted: 214 85% 15%;
+    --bias-left: 213 53% 60%;
+    --bias-left-foreground: 0 0% 100%;
     
-    --perspective-center: 270 60% 60%;
-    --perspective-center-foreground: 0 0% 100%;
-    --perspective-center-muted: 270 60% 15%;
+    --bias-center: 0 0% 90%;
+    --bias-center-foreground: 0 0% 10%;
     
-    --perspective-right: 0 75% 60%;
-    --perspective-right-foreground: 0 0% 100%;
-    --perspective-right-muted: 0 75% 15%;
+    --bias-right: 0 65% 70%;
+    --bias-right-foreground: 0 0% 100%;
     
-    --perspective-facts: 142 70% 50%;
-    --perspective-facts-foreground: 0 0% 100%;
-    --perspective-facts-muted: 142 70% 15%;
+    --bias-facts: 142 70% 50%;
+    --bias-facts-foreground: 0 0% 100%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -133,6 +126,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline uppercase tracking-tight;
   }
 }

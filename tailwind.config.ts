@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        headline: ['Oswald', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,19 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        perspective: {
-          left: "hsl(var(--perspective-left))",
-          "left-foreground": "hsl(var(--perspective-left-foreground))",
-          "left-muted": "hsl(var(--perspective-left-muted))",
-          center: "hsl(var(--perspective-center))",
-          "center-foreground": "hsl(var(--perspective-center-foreground))",
-          "center-muted": "hsl(var(--perspective-center-muted))",
-          right: "hsl(var(--perspective-right))",
-          "right-foreground": "hsl(var(--perspective-right-foreground))",
-          "right-muted": "hsl(var(--perspective-right-muted))",
-          facts: "hsl(var(--perspective-facts))",
-          "facts-foreground": "hsl(var(--perspective-facts-foreground))",
-          "facts-muted": "hsl(var(--perspective-facts-muted))",
+        bias: {
+          left: "hsl(var(--bias-left))",
+          "left-foreground": "hsl(var(--bias-left-foreground))",
+          center: "hsl(var(--bias-center))",
+          "center-foreground": "hsl(var(--bias-center-foreground))",
+          right: "hsl(var(--bias-right))",
+          "right-foreground": "hsl(var(--bias-right-foreground))",
+          facts: "hsl(var(--bias-facts))",
+          "facts-foreground": "hsl(var(--bias-facts-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
