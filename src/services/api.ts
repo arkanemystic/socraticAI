@@ -6,6 +6,7 @@ export interface Article {
   title: string;
   summary: string[];
   url: string;
+  imageUrl?: string;
 }
 
 export interface TopicAnalysis {
@@ -67,7 +68,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Climate change positioned as central campaign issue",
             "Focus on income inequality resonates with younger voters"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          imageUrl: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=500&fit=crop"
         },
         {
           outlet: "MSNBC",
@@ -78,7 +80,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Urban areas seeing record registration",
             "Get-out-the-vote efforts target key demographics"
           ],
-          url: "https://example.com/left2"
+          url: "https://example.com/left2",
+          imageUrl: "https://images.unsplash.com/photo-1577212017184-80cc0da11082?w=800&h=500&fit=crop"
         }
       ],
       center: [
@@ -91,7 +94,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Economic concerns dominate voter priorities",
             "Both campaigns focus resources on battleground states"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          imageUrl: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&h=500&fit=crop"
         },
         {
           outlet: "Associated Press",
@@ -102,7 +106,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Fact-checkers busy during heated exchanges",
             "Undecided voters remain key to outcome"
           ],
-          url: "https://example.com/center2"
+          url: "https://example.com/center2",
+          imageUrl: "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=800&h=500&fit=crop"
         }
       ],
       right: [
@@ -115,7 +120,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Tax cuts and business regulation central to platform",
             "Traditional values resonate in rural communities"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          imageUrl: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=500&fit=crop"
         },
         {
           outlet: "The Wall Street Journal",
@@ -126,7 +132,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Business leaders weigh in on candidate proposals",
             "Market stability becomes campaign focal point"
           ],
-          url: "https://example.com/right2"
+          url: "https://example.com/right2",
+          imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=500&fit=crop"
         }
       ],
       facts: [
@@ -159,7 +166,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Privacy advocates push for data protection measures",
             "Proposed legislation aims to prevent algorithmic bias"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop"
         }
       ],
       center: [
@@ -172,7 +180,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Balance sought between innovation and safety",
             "Experts present various regulatory frameworks"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop"
         }
       ],
       right: [
@@ -185,7 +194,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Free market approach favored over government mandates",
             "Concerns raised about bureaucratic interference"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop"
         }
       ],
       facts: [
@@ -214,7 +224,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Significant investment in renewable energy",
             "Environmental groups call it a good first step"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          imageUrl: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=500&fit=crop"
         }
       ],
       center: [
@@ -227,7 +238,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Includes tax credits for electric vehicles",
             "Implementation timeline extends to 2035"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          imageUrl: "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800&h=500&fit=crop"
         }
       ],
       right: [
@@ -240,7 +252,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Potential negative impact on oil and gas industry",
             "Questions raised about economic consequences"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          imageUrl: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=500&fit=crop"
         }
       ],
       facts: [
@@ -269,7 +282,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Lower out-of-pocket costs reported by beneficiaries",
             "Advocates push for further expansion"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop"
         }
       ],
       center: [
@@ -282,7 +296,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Bipartisan concern over affordability",
             "Various proposals under consideration"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          imageUrl: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=500&fit=crop"
         }
       ],
       right: [
@@ -295,7 +310,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Private sector innovation highlighted",
             "Concerns about government program costs"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          imageUrl: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&h=500&fit=crop"
         }
       ],
       facts: [
