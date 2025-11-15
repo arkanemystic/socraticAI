@@ -89,6 +89,14 @@ export default function Topic() {
               </p>
             </div>
 
+            {/* Facts Section */}
+            <div className="mb-12">
+              <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-bias-facts">
+                <h3 className="text-2xl font-headline tracking-tight">Verified Facts</h3>
+              </div>
+              <FactsCard facts={analysis.perspectives.facts} />
+            </div>
+
             {/* Perspective Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
               {/* Left Perspective */}
@@ -132,14 +140,6 @@ export default function Topic() {
                   />
                 ))}
               </div>
-            </div>
-
-            {/* Facts Section */}
-            <div className="mb-12">
-              <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-bias-facts">
-                <h3 className="text-2xl font-headline tracking-tight">Verified Facts</h3>
-              </div>
-              <FactsCard facts={analysis.perspectives.facts} />
             </div>
 
             {/* Sources Section */}
