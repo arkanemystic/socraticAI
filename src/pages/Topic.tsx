@@ -1,6 +1,7 @@
 import { useParams, useSearchParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "@/services/api";
+import { analyzeTopic, getHotTopics } from "@/services/api";
+import type { HotTopic } from "@/types/api";
 import { NewsCard } from "@/components/NewsCard";
 import { FactsCard } from "@/components/FactsCard";
 import { SourcesTable } from "@/components/SourcesTable";
@@ -16,13 +17,14 @@ export default function Topic() {
   const query = searchParams.get("q");
 
   const { data: analysis, isLoading } = useQuery({
-    queryKey: ["topicAnalysis", id, query],
-    queryFn: () => query ? api.analyzeTopic(query) : api.getTopicById(id!),
+    queryKey: ["topicAnalysis", query || id],
+    queryFn: () => analyzeTopic(query || id || ""),
+    enabled: !!(query || id),
   });
 
-  const { data: hotTopics } = useQuery({
-    queryKey: ["popularTopics"],
-    queryFn: api.getPopularTopics,
+  const { data: hotTopicsData } = useQuery({
+    queryKey: ["hotTopics"],
+    queryFn: getHotTopics,
   });
 
   const handleSearch = (newQuery: string) => {
@@ -139,7 +141,7 @@ export default function Topic() {
               <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-bias-facts">
                 <h3 className="text-2xl font-headline tracking-tight">Verified Facts</h3>
               </div>
-              <FactsCard facts={analysis.perspectives.facts} />
+              <FactsCard facts={analysis.facts} />
             </div>
 
             {/* Sources Section */}
@@ -156,12 +158,12 @@ export default function Topic() {
                 <h3 className="text-2xl font-headline tracking-tight">Hot Topics</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {hotTopics?.map((topic) => (
+                {hotTopicsData?.map((hotTopic: HotTopic, idx: number) => (
                   <TopicCard
-                    key={topic.id}
-                    title={topic.title}
-                    description={topic.description}
-                    onClick={() => handleTopicClick(topic.id)}
+                    key={idx}
+                    title={hotTopic.topic}
+                    description={hotTopic.reason}
+                    onClick={() => handleTopicClick(hotTopic.topic.toLowerCase().replace(/\s+/g, "-"))}
                   />
                 ))}
               </div>

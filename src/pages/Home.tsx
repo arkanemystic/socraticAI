@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { SearchBar } from "@/components/SearchBar";
 import { TopicCard } from "@/components/TopicCard";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "@/services/api";
+import { getPopularTopics } from "@/services/api";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
   
   const { data: topics, isLoading } = useQuery({
     queryKey: ["popularTopics"],
-    queryFn: api.getPopularTopics,
+    queryFn: getPopularTopics,
   });
 
   const handleSearch = (query: string) => {
