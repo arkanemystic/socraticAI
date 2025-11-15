@@ -48,8 +48,22 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4 border-b-2 border-border">
-        <div className="container mx-auto max-w-4xl">
+      <section className="relative py-16 px-4 border-b-2 border-border overflow-hidden">
+        {/* Background Image Collage */}
+        <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-0 opacity-[0.08]">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+          <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?w=800&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+          <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=800&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+          <img src="https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=800&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+          <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale" />
+        </div>
+        
+        {/* Overlay for text legibility */}
+        <div className="absolute inset-0 bg-background/80"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-6xl font-headline mb-4 tracking-tighter">
               Break out of your echo chamber
