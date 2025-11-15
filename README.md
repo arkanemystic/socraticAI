@@ -145,3 +145,6 @@ python app.py
 - Topic similarity clustering  
 - User accounts  
 - Mobile performance tuning
+
+## Demo Video
+https://youtu.be/fpL_kgeM3R4
