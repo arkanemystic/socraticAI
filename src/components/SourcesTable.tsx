@@ -13,30 +13,30 @@ interface SourcesTableProps {
 }
 
 const biasColors: Record<string, string> = {
-  "Left": "bg-perspective-left-muted text-perspective-left border-perspective-left/20",
-  "Lean Left": "bg-perspective-left-muted text-perspective-left border-perspective-left/20",
-  "Center": "bg-perspective-center-muted text-perspective-center border-perspective-center/20",
-  "Lean Right": "bg-perspective-right-muted text-perspective-right border-perspective-right/20",
-  "Right": "bg-perspective-right-muted text-perspective-right border-perspective-right/20",
+  "Left": "bg-bias-left text-bias-left-foreground",
+  "Lean Left": "bg-bias-left text-bias-left-foreground",
+  "Center": "bg-bias-center text-bias-center-foreground border border-border",
+  "Lean Right": "bg-bias-right text-bias-right-foreground",
+  "Right": "bg-bias-right text-bias-right-foreground",
 };
 
 export function SourcesTable({ sources }: SourcesTableProps) {
   return (
-    <div className="rounded-lg border bg-card">
+    <div className="rounded-sm border-2 border-border bg-card overflow-hidden">
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead className="w-[40%]">Outlet</TableHead>
-            <TableHead className="w-[30%]">Bias</TableHead>
-            <TableHead>URL</TableHead>
+          <TableRow className="border-b-2 border-border">
+            <TableHead className="w-[40%] font-headline tracking-tight">Outlet</TableHead>
+            <TableHead className="w-[30%] font-headline tracking-tight">Bias</TableHead>
+            <TableHead className="font-headline tracking-tight">URL</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {sources.map((source, index) => (
-            <TableRow key={index}>
-              <TableCell className="font-medium">{source.name}</TableCell>
+            <TableRow key={index} className="border-b border-border">
+              <TableCell className="font-medium font-body">{source.name}</TableCell>
               <TableCell>
-                <Badge variant="outline" className={biasColors[source.bias] || ""}>
+                <Badge variant="outline" className={`rounded-sm text-xs ${biasColors[source.bias] || ""}`}>
                   {source.bias}
                 </Badge>
               </TableCell>
@@ -45,7 +45,7 @@ export function SourcesTable({ sources }: SourcesTableProps) {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                  className="inline-flex items-center gap-1 text-sm font-body text-foreground hover:text-accent transition-colors"
                 >
                   Visit source
                   <ExternalLink className="h-3 w-3" />

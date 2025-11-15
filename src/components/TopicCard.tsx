@@ -10,16 +10,16 @@ interface TopicCardProps {
 export function TopicCard({ title, description, onClick }: TopicCardProps) {
   return (
     <Card 
-      className="cursor-pointer transition-all hover:shadow-md hover:border-primary/50 group"
+      className="cursor-pointer transition-all hover:border-primary border-2 border-border rounded-sm group"
       onClick={onClick}
     >
-      <CardHeader>
+      <CardHeader className="p-6">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <CardTitle className="text-xl mb-2">{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
+            <CardTitle className="text-xl font-headline mb-2 tracking-tight">{title}</CardTitle>
+            <CardDescription className="font-body">{description}</CardDescription>
           </div>
-          <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1 ml-2" />
+          <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 mt-1 ml-2" />
         </div>
       </CardHeader>
     </Card>
