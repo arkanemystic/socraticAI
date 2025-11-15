@@ -29,6 +29,17 @@ export function NewsCard({ article, biasDistribution }: NewsCardProps) {
 
   return (
     <Card className="overflow-hidden rounded-sm border-2 border-border hover:border-primary transition-colors">
+      {/* Image */}
+      {article.imageUrl && (
+        <div className="relative w-full h-48 overflow-hidden bg-muted">
+          <img 
+            src={article.imageUrl} 
+            alt={article.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      
       <div className="p-4 space-y-3">
         {/* Source and Bias */}
         <div className="flex items-center justify-between gap-2">
