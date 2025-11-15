@@ -6,6 +6,7 @@ import { FactsCard } from "@/components/FactsCard";
 import { SourcesTable } from "@/components/SourcesTable";
 import { SearchBar } from "@/components/SearchBar";
 import { TopicCard } from "@/components/TopicCard";
+import { StoryTimeline } from "@/components/StoryTimeline";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft } from "lucide-react";
 
@@ -95,6 +96,20 @@ export default function Topic() {
                 <h3 className="text-2xl font-headline tracking-tight">Verified Facts</h3>
               </div>
               <FactsCard facts={analysis.perspectives.facts} />
+            </div>
+
+            {/* Story Timeline */}
+            <div className="mb-12">
+              <div className="flex items-center gap-2 mb-6 pb-2 border-b-2 border-border">
+                <h3 className="text-2xl font-headline tracking-tight">Story Timeline</h3>
+              </div>
+              <StoryTimeline
+                articles={[
+                  ...analysis.perspectives.left,
+                  ...analysis.perspectives.center,
+                  ...analysis.perspectives.right,
+                ]}
+              />
             </div>
 
             {/* Perspective Grid */}

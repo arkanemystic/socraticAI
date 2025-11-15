@@ -6,6 +6,7 @@ export interface Article {
   title: string;
   summary: string[];
   url: string;
+  date: string;
 }
 
 export interface TopicAnalysis {
@@ -67,7 +68,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Climate change positioned as central campaign issue",
             "Focus on income inequality resonates with younger voters"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          date: "2024-11-10"
         },
         {
           outlet: "MSNBC",
@@ -78,7 +80,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Urban areas seeing record registration",
             "Get-out-the-vote efforts target key demographics"
           ],
-          url: "https://example.com/left2"
+          url: "https://example.com/left2",
+          date: "2024-11-08"
         }
       ],
       center: [
@@ -91,7 +94,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Economic concerns dominate voter priorities",
             "Both campaigns focus resources on battleground states"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          date: "2024-11-12"
         },
         {
           outlet: "Associated Press",
@@ -102,7 +106,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Fact-checkers busy during heated exchanges",
             "Undecided voters remain key to outcome"
           ],
-          url: "https://example.com/center2"
+          url: "https://example.com/center2",
+          date: "2024-11-05"
         }
       ],
       right: [
@@ -115,7 +120,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Tax cuts and business regulation central to platform",
             "Traditional values resonate in rural communities"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          date: "2024-11-09"
         },
         {
           outlet: "The Wall Street Journal",
@@ -126,7 +132,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Business leaders weigh in on candidate proposals",
             "Market stability becomes campaign focal point"
           ],
-          url: "https://example.com/right2"
+          url: "https://example.com/right2",
+          date: "2024-11-06"
         }
       ],
       facts: [
@@ -159,7 +166,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Privacy advocates push for data protection measures",
             "Proposed legislation aims to prevent algorithmic bias"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          date: "2024-10-28"
         }
       ],
       center: [
@@ -172,7 +180,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Balance sought between innovation and safety",
             "Experts present various regulatory frameworks"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          date: "2024-10-30"
         }
       ],
       right: [
@@ -185,7 +194,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Free market approach favored over government mandates",
             "Concerns raised about bureaucratic interference"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          date: "2024-10-25"
         }
       ],
       facts: [
@@ -214,7 +224,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Significant investment in renewable energy",
             "Environmental groups call it a good first step"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          date: "2024-10-15"
         }
       ],
       center: [
@@ -227,7 +238,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Includes tax credits for electric vehicles",
             "Implementation timeline extends to 2035"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          date: "2024-10-18"
         }
       ],
       right: [
@@ -240,7 +252,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Potential negative impact on oil and gas industry",
             "Questions raised about economic consequences"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          date: "2024-10-20"
         }
       ],
       facts: [
@@ -269,7 +282,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Lower out-of-pocket costs reported by beneficiaries",
             "Advocates push for further expansion"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          date: "2024-09-22"
         }
       ],
       center: [
@@ -282,7 +296,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Bipartisan concern over affordability",
             "Various proposals under consideration"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          date: "2024-09-25"
         }
       ],
       right: [
@@ -295,7 +310,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Private sector innovation highlighted",
             "Concerns about government program costs"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          date: "2024-09-28"
         }
       ],
       facts: [
@@ -324,7 +340,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Proposes increased funding for public transit",
             "Strong support from labor unions and progressive groups"
           ],
-          url: "https://example.com/left1"
+          url: "https://example.com/left1",
+          date: "2024-11-13"
         },
         {
           outlet: "The Village Voice",
@@ -335,7 +352,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Police reform and social services take center stage",
             "Youth voter registration hits record levels"
           ],
-          url: "https://example.com/left2"
+          url: "https://example.com/left2",
+          date: "2024-11-07"
         }
       ],
       center: [
@@ -348,7 +366,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Crime and economy dominate debate topics",
             "Voters express concerns about city's direction"
           ],
-          url: "https://example.com/center1"
+          url: "https://example.com/center1",
+          date: "2024-11-11"
         },
         {
           outlet: "Gothamist",
@@ -359,7 +378,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Both sides present competing visions for NYC",
             "Turnout expected to be decisive factor"
           ],
-          url: "https://example.com/center2"
+          url: "https://example.com/center2",
+          date: "2024-11-04"
         }
       ],
       right: [
@@ -372,7 +392,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Business leaders endorse pro-growth policies",
             "Concerns over rising crime rates drive messaging"
           ],
-          url: "https://example.com/right1"
+          url: "https://example.com/right1",
+          date: "2024-11-09"
         },
         {
           outlet: "New York Sun",
@@ -383,7 +404,8 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
             "Tax policy differences clearly defined",
             "Focus on improving business climate in NYC"
           ],
-          url: "https://example.com/right2"
+          url: "https://example.com/right2",
+          date: "2024-11-02"
         }
       ],
       facts: [
