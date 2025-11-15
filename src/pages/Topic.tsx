@@ -8,18 +8,23 @@ import { SearchBar } from "@/components/SearchBar";
 import { TopicCard } from "@/components/TopicCard";
 import { StoryTimeline } from "@/components/StoryTimeline";
 import { PerspectiveComparison } from "@/components/PerspectiveComparison";
+import { AnalysisLoadingScreen } from "@/components/AnalysisLoadingScreen";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft } from "lucide-react";
+import { useState } from "react";
 
 export default function Topic() {
   const { id } = useParams<{ id: string }>();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const query = searchParams.get("q");
+  const [showLoadingScreen, setShowLoadingScreen] = useState(true);
+  const [loadingComplete, setLoadingComplete] = useState(false);
 
   const { data: analysis, isLoading } = useQuery({
     queryKey: ["topicAnalysis", id, query],
     queryFn: () => query ? api.analyzeTopic(query) : api.getTopicById(id!),
+    enabled: loadingComplete,
   });
 
   const { data: hotTopics } = useQuery({
@@ -35,6 +40,15 @@ export default function Topic() {
   const handleTopicClick = (topicId: string) => {
     navigate(`/topic/${topicId}`);
   };
+
+  const handleLoadingComplete = () => {
+    setShowLoadingScreen(false);
+    setLoadingComplete(true);
+  };
+
+  if (showLoadingScreen) {
+    return <AnalysisLoadingScreen onComplete={handleLoadingComplete} />;
+  }
 
   return (
     <div className="min-h-screen bg-background">
