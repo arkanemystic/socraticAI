@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
-import { Article } from "@/services/api";
+import { Article } from "@/types/api";
 
 interface ArticleCardProps {
   article: Article;
