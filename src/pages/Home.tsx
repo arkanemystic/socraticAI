@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { SearchBar } from "@/components/SearchBar";
 import { TopicCard } from "@/components/TopicCard";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useQuery } from "@tanstack/react-query";
 import { getPopularTopics } from "@/services/api";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -29,20 +30,23 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-headline tracking-tighter">Socratic AI</h1>
-            <nav className="flex gap-1">
-              <a 
-                href="/" 
-                className="px-4 py-2 text-sm font-medium border-b-2 border-accent transition-colors"
-              >
-                Home
-              </a>
-              <a 
-                href="/about" 
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground border-b-2 border-transparent hover:border-border transition-colors"
-              >
-                About
-              </a>
-            </nav>
+            <div className="flex items-center gap-2">
+              <nav className="flex gap-1">
+                <a 
+                  href="/" 
+                  className="px-4 py-2 text-sm font-medium border-b-2 border-accent transition-colors"
+                >
+                  Home
+                </a>
+                <a 
+                  href="/about" 
+                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground border-b-2 border-transparent hover:border-border transition-colors"
+                >
+                  About
+                </a>
+              </nav>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
