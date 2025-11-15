@@ -310,6 +310,98 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
       { name: "The Hill", url: "https://thehill.com", bias: "Center" },
       { name: "The Federalist", url: "https://thefederalist.com", bias: "Right" }
     ]
+  },
+  "nyc-mayoral-race": {
+    topic: "NYC Mayoral Race",
+    perspectives: {
+      left: [
+        {
+          outlet: "The New York Times",
+          bias: "Lean Left",
+          title: "Progressive Candidate Promises Bold Reform",
+          summary: [
+            "Campaign focuses on affordable housing expansion",
+            "Proposes increased funding for public transit",
+            "Strong support from labor unions and progressive groups"
+          ],
+          url: "https://example.com/left1"
+        },
+        {
+          outlet: "The Village Voice",
+          bias: "Left",
+          title: "Grassroots Movement Energizes Campaign",
+          summary: [
+            "Community organizers rally behind reform agenda",
+            "Police reform and social services take center stage",
+            "Youth voter registration hits record levels"
+          ],
+          url: "https://example.com/left2"
+        }
+      ],
+      center: [
+        {
+          outlet: "NY1",
+          bias: "Center",
+          title: "Mayoral Race Remains Competitive",
+          summary: [
+            "Latest polls show tight race among top candidates",
+            "Crime and economy dominate debate topics",
+            "Voters express concerns about city's direction"
+          ],
+          url: "https://example.com/center1"
+        },
+        {
+          outlet: "Gothamist",
+          bias: "Center",
+          title: "Candidates Face Off in Final Debate",
+          summary: [
+            "Housing affordability emerges as key issue",
+            "Both sides present competing visions for NYC",
+            "Turnout expected to be decisive factor"
+          ],
+          url: "https://example.com/center2"
+        }
+      ],
+      right: [
+        {
+          outlet: "New York Post",
+          bias: "Right",
+          title: "Law and Order Focus Resonates with Voters",
+          summary: [
+            "Candidate emphasizes public safety record",
+            "Business leaders endorse pro-growth policies",
+            "Concerns over rising crime rates drive messaging"
+          ],
+          url: "https://example.com/right1"
+        },
+        {
+          outlet: "New York Sun",
+          bias: "Lean Right",
+          title: "Fiscal Responsibility Takes Center Stage",
+          summary: [
+            "Budget deficit concerns shape campaign strategy",
+            "Tax policy differences clearly defined",
+            "Focus on improving business climate in NYC"
+          ],
+          url: "https://example.com/right2"
+        }
+      ],
+      facts: [
+        "NYC mayoral election is scheduled for November 2025",
+        "The mayor serves a four-year term",
+        "NYC has a population of approximately 8.3 million",
+        "Early voting begins two weeks before election day",
+        "NYC uses ranked-choice voting for mayoral primaries"
+      ]
+    },
+    sources: [
+      { name: "The New York Times", url: "https://nytimes.com", bias: "Lean Left" },
+      { name: "The Village Voice", url: "https://villagevoice.com", bias: "Left" },
+      { name: "NY1", url: "https://ny1.com", bias: "Center" },
+      { name: "Gothamist", url: "https://gothamist.com", bias: "Center" },
+      { name: "New York Post", url: "https://nypost.com", bias: "Right" },
+      { name: "New York Sun", url: "https://nysun.com", bias: "Lean Right" }
+    ]
   }
 };
 
