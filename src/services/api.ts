@@ -328,101 +328,101 @@ const mockAnalyses: Record<string, TopicAnalysis> = {
     ]
   },
   "nyc-mayoral-race": {
-    topic: "NYC Mayoral Race",
+    topic: "NYC Mayoral Race 2025",
     perspectives: {
       left: [
         {
           outlet: "The New York Times",
           bias: "Lean Left",
-          title: "Progressive Candidate Promises Bold Reform",
+          title: "Mamdani's Historic Win Marks Progressive Shift in NYC",
           summary: [
-            "Campaign focuses on affordable housing expansion",
-            "Proposes increased funding for public transit",
-            "Strong support from labor unions and progressive groups"
+            "Democratic socialist Zohran Mamdani wins with 50.4% of vote",
+            "Victory represents major progressive movement in nation's largest city",
+            "Campaign focused on affordable housing and transit expansion"
           ],
-          url: "https://example.com/left1",
-          date: "2024-11-13"
+          url: "https://www.nytimes.com/interactive/2025/11/04/us/elections/results-new-york-city-mayor.html",
+          date: "2025-11-05"
         },
         {
-          outlet: "The Village Voice",
+          outlet: "The Guardian",
           bias: "Left",
-          title: "Grassroots Movement Energizes Campaign",
+          title: "Socialist Wave Reshapes American Politics",
           summary: [
-            "Community organizers rally behind reform agenda",
-            "Police reform and social services take center stage",
-            "Youth voter registration hits record levels"
+            "Mamdani's victory part of broader progressive wins nationwide",
+            "34-year-old assemblyman promises 'relentless improvement'",
+            "Strong support from labor unions and grassroots organizers"
           ],
           url: "https://example.com/left2",
-          date: "2024-11-07"
+          date: "2025-11-06"
         }
       ],
       center: [
         {
-          outlet: "NY1",
+          outlet: "CNN",
           bias: "Center",
-          title: "Mayoral Race Remains Competitive",
+          title: "Democratic Socialist Defeats Cuomo in NYC Mayoral Race",
           summary: [
-            "Latest polls show tight race among top candidates",
-            "Crime and economy dominate debate topics",
-            "Voters express concerns about city's direction"
+            "Mamdani defeats former Gov. Cuomo running as independent",
+            "Republican Curtis Sliwa finishes third with 7.1% of vote",
+            "Incumbent Eric Adams dropped out and endorsed Cuomo"
           ],
-          url: "https://example.com/center1",
-          date: "2024-11-11"
+          url: "https://www.cnn.com/election/2025/results/mayor-results",
+          date: "2025-11-05"
         },
         {
-          outlet: "Gothamist",
+          outlet: "NY1",
           bias: "Center",
-          title: "Candidates Face Off in Final Debate",
+          title: "NYC Voters Choose Progressive Direction",
           summary: [
-            "Housing affordability emerges as key issue",
-            "Both sides present competing visions for NYC",
-            "Turnout expected to be decisive factor"
+            "Turnout exceeded expectations in historic race",
+            "Housing affordability and transit were key issues",
+            "Results reflect growing divide between progressive and moderate Democrats"
           ],
-          url: "https://example.com/center2",
-          date: "2024-11-04"
+          url: "https://ny1.com/nyc/all-boroughs/news/2025/11/05/nyc-mayoral-race-november-general-election",
+          date: "2025-11-04"
         }
       ],
       right: [
         {
-          outlet: "New York Post",
+          outlet: "Fox News",
           bias: "Right",
-          title: "Law and Order Focus Resonates with Voters",
+          title: "Democratic Socialist Wins NYC Mayor's Race Despite Trump Endorsement of Cuomo",
           summary: [
-            "Candidate emphasizes public safety record",
-            "Business leaders endorse pro-growth policies",
-            "Concerns over rising crime rates drive messaging"
+            "Trump endorsed Cuomo on Monday, warned of federal funding cuts",
+            "Conservative critics label Mamdani as 'communist'",
+            "Business leaders express concerns about socialist policies"
           ],
-          url: "https://example.com/right1",
-          date: "2024-11-09"
+          url: "https://www.foxnews.com/politics/democratic-socialists-win-mayoral-races-new-york-city-seattle-historic-victories",
+          date: "2025-11-05"
         },
         {
-          outlet: "New York Sun",
-          bias: "Lean Right",
-          title: "Fiscal Responsibility Takes Center Stage",
+          outlet: "New York Post",
+          bias: "Right",
+          title: "NYC Elects Far-Left Mayor as Crime Remains Top Concern",
           summary: [
-            "Budget deficit concerns shape campaign strategy",
-            "Tax policy differences clearly defined",
-            "Focus on improving business climate in NYC"
+            "Curtis Sliwa's law-and-order message gains only 7% support",
+            "Business community worries about tax increases and regulations",
+            "Cuomo's independent bid fails to unite moderate voters"
           ],
           url: "https://example.com/right2",
-          date: "2024-11-02"
+          date: "2025-11-06"
         }
       ],
       facts: [
-        "NYC mayoral election is scheduled for November 2025",
-        "The mayor serves a four-year term",
-        "NYC has a population of approximately 8.3 million",
-        "Early voting begins two weeks before election day",
-        "NYC uses ranked-choice voting for mayoral primaries"
+        "Zohran Mamdani won with 50.4% of the vote on November 4, 2025",
+        "Andrew Cuomo received 41.6% running as an independent",
+        "Curtis Sliwa (Republican) received 7.1% of votes",
+        "Eric Adams dropped out and endorsed Andrew Cuomo",
+        "Mamdani is a 34-year-old state assemblyman and democratic socialist"
       ]
     },
     sources: [
       { name: "The New York Times", url: "https://nytimes.com", bias: "Lean Left" },
-      { name: "The Village Voice", url: "https://villagevoice.com", bias: "Left" },
+      { name: "The Guardian", url: "https://theguardian.com", bias: "Left" },
+      { name: "CNN", url: "https://cnn.com", bias: "Center" },
       { name: "NY1", url: "https://ny1.com", bias: "Center" },
-      { name: "Gothamist", url: "https://gothamist.com", bias: "Center" },
-      { name: "New York Post", url: "https://nypost.com", bias: "Right" },
-      { name: "New York Sun", url: "https://nysun.com", bias: "Lean Right" }
+      { name: "Fox News", url: "https://foxnews.com", bias: "Right" },
+      { name: "New York Post", url: "https://nypost.com", bias: "Right" }
     ]
   }
 };
