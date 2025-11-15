@@ -1,73 +1,147 @@
-# Welcome to your Lovable project
+# Socratic AI
+*A news-summarizing, bias-balancing, perspective-aligned AI built for people who want the truth without the tantrums.*
 
-## Project info
+## Overview
+Socratic AI digests a topic you search, fetches articles across the political/ideological spectrum, and returns four clean lanes of understanding:
 
-**URL**: https://lovable.dev/projects/a1112cd1-435e-4f78-ae89-0f2aa206ac5f
+- **Left**
+- **Center**
+- **Right**
+- **Facts-Only**
 
-## How can I edit this code?
+The system is built for clarity, neutrality, and speed. No secret sauce—just architecture that actually makes sense.
 
-There are several ways of editing your application.
+## Architecture
 
-**Use Lovable**
+### High-Level Stack
+**Frontend:** React SPA (Lovable.dev)  
+**API Layer:** Flask (input validation, secret shielding)  
+**Backend Brain:** n8n workflows  
+**Storage:** n8n database (topics, logs, cached trending topics)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a1112cd1-435e-4f78-ae89-0f2aa206ac5f) and start prompting.
+### Request Flow
+1. User enters a topic  
+2. Frontend → Flask `/api/analyze`  
+3. Flask → n8n workflow  
+4. n8n fetches articles, summaries, perspectives  
+5. n8n → Flask → frontend  
+6. UI renders the four perspectives + sources + hot topics
 
-Changes made via Lovable will be committed automatically to this repo.
+## Features
 
-**Use your preferred IDE**
+### 1. Multi-Perspective Topic Analysis
+Each query returns structured summaries:
+- Left / Center / Right perspectives
+- Facts-only distilled view
+- Outlet name, bias label, bullets, and links
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 2. Hot Topics
+Trending global topics aggregated automatically via n8n workflows.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 3. Source Transparency
+Curated outlet list with:
+- Bias  
+- Credibility  
+- Homepage URL  
+- Category (left / center / right / factual)
 
-Follow these steps:
+### 4. Hackathon-Friendly Build Path
+- React UI with mocked data  
+- Flask with mocked responses  
+- n8n pipeline wired in afterward  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Frontend (React + Lovable)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Pages
+- `/` — Homepage search  
+- `/topic/:id` — Topic summaries  
+- `/about` — Methodology  
 
-# Step 3: Install the necessary dependencies.
-npm i
+### API Module Example
+```ts
+export async function analyzeTopic(query) {
+  return fetch("/api/analyze", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query }),
+  }).then(r => r.json());
+}
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Backend (Flask)
+
+### Purpose
+- Normalize requests  
+- Hide API keys and n8n URLs  
+- Add metadata  
+- Forward requests to n8n  
+
+### Key Endpoints
+`POST /api/analyze`  
+`GET /api/popular-topics`  
+`GET /api/hot-topics`
+
+## n8n Workflows
+
+### Workflow A — analyze-topic
+- Normalize topic  
+- Fetch sources  
+- Pull articles  
+- Summarize with LLM  
+- Generate facts-only bullets  
+- Log query  
+- Return unified JSON  
+
+### Workflow B — hot-topics
+- Fetch global RSS  
+- Cluster stories  
+- Return trending items  
+
+## Security
+- No API keys in frontend  
+- All secrets in environment variables  
+- CORS restricted  
+- HTTPS recommended  
+
+## Data Contract
+
+### Example `/api/analyze` response
+```json
+{
+  "topic": "climate change bill",
+  "perspectives": {
+    "left": [],
+    "center": [],
+    "right": []
+  },
+  "facts": [],
+  "sources": []
+}
+```
+
+## Local Development
+
+### Frontend
+```
+cd frontend
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Flask
+```
+cd server
+pip install -r requirements.txt
+python app.py
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### n8n
+- Import workflows  
+- Set webhook URLs  
+- Start Docker or local instance  
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a1112cd1-435e-4f78-ae89-0f2aa206ac5f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Roadmap
+- Automatic credibility scoring  
+- Topic similarity clustering  
+- User accounts  
+- Mobile performance tuning
